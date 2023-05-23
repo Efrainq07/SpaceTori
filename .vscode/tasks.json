@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile and see",
+            "type": "shell",
+            "command": "manim -qm beamer.py && manim-presentation Beamer",
+            "presentation": {"echo": true, "reveal": "always", "focus": false, "panel": "shared", "showReuseMessage": false, "clear": true},
+        },
+        {
+            "label": "compile",
+            "type": "shell",
+            "command": "manim -qm beamer.py",
+            "presentation": {"echo": true, "reveal": "always", "focus": false, "panel": "shared", "showReuseMessage": false, "clear": true},
+        },
+        {
+            "label": "compile and present",
+            "type": "shell",
+            "command": "manim -qp --fps 30 beamer.py && manim-presentation --fullscreen Beamer",
+            "presentation": {"echo": true, "reveal": "always", "focus": false, "panel": "shared", "showReuseMessage": false, "clear": true},
+        },
+        {
+            "label": "present",
+            "type": "shell",
+            "command": "manim-presentation --fullscreen Beamer",
+            "presentation": {"echo": true, "reveal": "always", "focus": false, "panel": "shared", "showReuseMessage": false, "clear": true},
+        },
+        {
+            "label": "compile and see current slide",
+            "type": "shell",
+            "command": "manim -qm beamer.py && manim-presentation BeamerReferences",
+            "presentation": {"echo": true, "reveal": "always", "focus": false, "panel": "shared", "showReuseMessage": false, "clear": true},
+        }
+    ]
+}
